@@ -35,7 +35,7 @@
             <p> Copyright@2022-GestPersonnel</p>
         </div>
     </footer>
-    
+
     <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
 </body>

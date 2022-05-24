@@ -34,8 +34,9 @@
             <td>{{$personnel->poste}}</td>
             <td>{{$personnel->titre}}</td>
             <td><img src="{{ asset('storage').'/'.$personnel->photo }}" style="width: 15%" alt=""></td>
-            <td><a class="button" href="/personnels/{{ $personnel->id }}"><img src="{{ asset('images/edit_profile_32px.png') }}" alt=""></a> </td>
-            <td><a class="button" href="/supprimer/{{ $personnel->id }}"><img src="{{ asset('images/waste_26px.png') }}" alt=""></a> </td>
+            <td> <a class="button" href="/personnels/{{ $personnel->id }}"><img src="{{ asset('Images/more.png') }}" style="width:30px;height:30px" alt=""></a> </td>
+            <td><a class="button"  href="/personnels/{{ $personnel->id }}" onclick="return confirm('Voulez-vous modifier?');"><img src="{{ asset('images/edit_profile_32px.png') }}"  style="width:30px;height:30px" alt=""></a> </td>
+            <td><a class="button" href="href="{{url('supprimer/'.$personnel->id) }}"><img src="{{ asset('images/waste_26px.png') }}" style="width:30px;height:30px" alt=""></a> </td>
             </tr>
             @endforeach
         </tbody>

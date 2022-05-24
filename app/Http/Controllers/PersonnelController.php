@@ -60,11 +60,11 @@ class PersonnelController extends Controller
         ->with('success','Personnel updated successfully.');
     }
 
-    public function destroy(Personnel $personnel)
+    public function destroy($id)
     {
+        $personnel = Personnel::find($id);
         $personnel->delete();
 
-        return redirect()->route('personnels.index')
-        ->with('success','Personnel deleted successfully.');
+        return redirect()->route('liste');
     }
 }

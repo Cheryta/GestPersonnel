@@ -18,7 +18,7 @@ Route::get('/', [PersonnelController::class, 'accueil']);
 Route::get('liste', [PersonnelController::class, "index"])->name("liste");
 Route::get('formulaire', [PersonnelController::class, "create"])->name("formulaire");
 Route::post('insertion', [PersonnelController::class, 'store'])->name('insertion');
-Route::get('supprimer/{id}', [PersonnelController::class, 'destroy'])->name('supprimer');
+Route::get('supprimer/{id}', [PersonnelController::class, 'destroy']);
 
 Route::get('/add-image',[PersonnelController::class,'addImage'])->name('images.add');
 
@@ -26,4 +26,4 @@ Route::post('/store-image',[PersonnelController::class,'storeImage'])
 ->name('images.store');
 
 Route::get('/view-image',[PersonnelController::class,'viewImage'])->name('images.view');
-//Route::ressource('gestionPersonnel', [PersonnelController::class]);
+
