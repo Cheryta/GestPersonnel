@@ -14,10 +14,10 @@
                 <a class="nav-link active" aria-current="page" href="{{url('/')}}">ACCUEIL</a>
             </li> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{ route('formulaire') }}">FORMULAIRE</a>
+                <a class="nav-link active" aria-current="page" href="{{route('gestion_personnel.create') }}">FORMULAIRE</a>
             </li> &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
             <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{ route('liste') }}">LISTE</a>
+                <a class="nav-link active" aria-current="page" href="{{route('gestion_personnel.index') }}">LISTE</a>
             </li>  &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp;
             <li class="nav-item">
                 <form class="d-flex">

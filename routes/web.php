@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\PersonnelController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PersonnelController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -14,16 +15,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PersonnelController::class, 'accueil']);
-Route::get('liste', [PersonnelController::class, "index"])->name("liste");
-Route::get('formulaire', [PersonnelController::class, "create"])->name("formulaire");
-Route::post('insertion', [PersonnelController::class, 'store'])->name('insertion');
-Route::get('supprimer/{id}', [PersonnelController::class, 'destroy']);
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::get('/add-image',[PersonnelController::class,'addImage'])->name('images.add');
+// Route::get('liste_gestion_perso', [Gestion_persoController::class, 'index'])->name('liste');
 
-Route::post('/store-image',[PersonnelController::class,'storeImage'])
-->name('images.store');
+// Route::get('formulaire_gestion_perso', [Gestion_persoController::class, 'create'])->name('formulaire');
 
-Route::get('/view-image',[PersonnelController::class,'viewImage'])->name('images.view');
+// Route::post('insertion', [Gestion_persoController::class, 'store'])->name('insertion');
 
+// Route::post('liste_gestion_perso', [Gestion_persoController::class, 'destroy'])->name('liste');
+Route::resource('gestion_personnel', PersonnelController::class);
+
+Route::get('supprimer_personnel/{id}', [PersonnelController::class, 'destroy']);
+
+// Route::get('modifier_personnel/{id}', [PersonnelController::class, 'edit']);

@@ -15,13 +15,13 @@ class CreatePersonnelsTable extends Migration
     {
         Schema::create('personnels', function (Blueprint $table) {
             $table->id();
-            $table->string("matricule");
-            $table->string("nom");
-            $table->string("prenom");
-            $table->string("genre");
-            $table->string("poste");
-            $table->string("titre");
-            $table->string("photo");
+            $table->integer('matricule');
+            $table->string('nom');
+            $table->string('prenom');
+            $table->string('genre');
+            $table->string('poste');
+            $table->string('titre');
+            $table->string('photo');
             $table->timestamps();
         });
     }
